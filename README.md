@@ -9,6 +9,7 @@ A news feed build with `graphql-yoga` and `prisma`
    in a terminal window to set up the database and run the migrations:
    - `npx prisma migrate up --experimental`
    - `npx prisma generate`
+   
    These two commands should generate the (SQLite) database migrations in the prisma folder of this project and initialize the prisma client.
 3. Run `node src/index.js` to start the GraphQL server.
 4. You can then proceed to `http://localhost:4000` to use the GraphQL playground to run queries against
