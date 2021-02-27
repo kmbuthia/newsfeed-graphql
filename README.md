@@ -72,6 +72,7 @@ header in these requests e.g.
 ```
 
 **Add post**
+```
 mutation {
   postLink(
     url: "henga.co"
@@ -82,6 +83,7 @@ mutation {
     description
   }
 }
+```
 
 **Edit/update post**
 ```
@@ -115,7 +117,7 @@ mutation {
 }
 ```
 
-### Upvote post
+**Upvote post**
 ```
 mutation {
   vote(linkId: 2) {
@@ -131,6 +133,27 @@ mutation {
 }
 ```
 
+**View feed**
+```
+query {
+  feed(
+    filter: {},
+  	clauses: {}
+  ) {
+    links {
+      id
+      description
+      url
+      postedBy {
+        name
+      }
+      votes {
+        id
+      }
+    }
+  }
+}
+```
 
 ### Realtime subscriptions to events
 You can be alerted when an event takes place by opening a new tab in the GraphQL server playground and
